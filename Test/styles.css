@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1219px;
+  margin: auto;
+}
+.header {
+  background-color: #007765;
+  & .header__nav {
+    display: flex;
+  }
+}
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.menu__columns {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+a {
+  text-decoration: none;
+}
