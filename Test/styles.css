@@ -15,7 +15,7 @@ a {
   max-width: 1219px;
   margin: auto;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   padding: 0px 55px;
 }
 
@@ -27,6 +27,8 @@ a {
     align-items: center;
     justify-content: space-between;
   }
+}
+@media only screen and (max-width: 600px) {
 }
 .nav__menu {
   list-style-type: none;
@@ -49,39 +51,127 @@ a {
   & .main__title {
     color: #ffffff;
     font-size: 72px;
+    text-align: center;
   }
 }
 
+/* Переделать для container, тк не работает flex */
 .the-problem {
-  height: 719px;
+  padding: 60px 0;
+  background-color: #eeeeee;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-/* ---------------- */
+  /* ---------------- */
   & .the-problem__title {
     color: #007765;
     font-size: 64px;
     height: 75px;
     text-align: center;
-    padding-top: 70px; /*35px;*/
   }
-/* ---------------- */
+  /* ---------------- */
   & .the-problem__note {
+    padding-top: 30px;
     font-size: 32px;
-    padding-top: 40px; /*20px;*/
   }
 }
 
 .quote {
   background-image: url("resource_images/background_2.png");
   background-size: cover;
-  height: 483px;
-/* ---------------- */
+
+  & .quote__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 483px;
+  }
+
+  /* ---------------- Почему подсвечивает .quote__note, а container нет?*/
   & .quote__note {
     color: #ffffff;
     font-size: 48px;
-    display: flex;
-    con
+    font-style: italic;
+    text-align: center;
   }
 }
+
+.introducing {
+  padding: 70px 0;
+
+  & .introducing__title {
+    color: #007765;
+    font-size: 64px;
+    text-align: center;
+  }
+  & .introducing__note {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    padding-top: 40px;
+
+    & .introducing__note-logo {
+      display: flex;
+      flex-direction: row;
+
+      & .introducing__note-logo-p {
+        padding-left: 40px;
+      }
+    }
+  }
+}
+
+.team {
+  padding: 70px 0;
+  background-color: #eeeeee;
+
+  & .team__title {
+    color: #007765;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  & .team__cards {
+    display: grid;
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-flow: row;
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  & .card {
+    text-align: center;
+  }
+
+  & .card__bio {
+    color: #007765;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 15px;
+  }
+  & .card__job-position {
+    font-size: 18px;
+    font-style: italic;
+  }
+}
+
+.footer {
+  background-color: #333333;
+  padding: 40px;
+
+  & .footer__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  & .footer__note {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 540px;
+    text-align: center;
+  }
+}
+
+/* ДоделатЭ. БурГер менu */
