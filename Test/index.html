@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/burger.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,8 +16,25 @@
   <body>
     <header class="header">
       <div class="container header__nav">
-        <img src="resource_images/logo-main.svg" alt="Logo" />
+        <a class="header__logo-main" href="#main">
+          <img src="assets/resource_images/logo-main.svg" alt="Logo" />
+        </a>
         <nav class="menu">
+          <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+          <label class="burger" for="burger-checkbox"><span></span></label>
+          <ul class="nav__burger-menu">
+            <li>
+              <a class="nav__burger-menu-item" href="#the-problem">
+                the problem
+              </a>
+            </li>
+            <li>
+              <a class="nav__burger-menu-item" href="#introducing">
+                PiedPiperCoin
+              </a>
+            </li>
+            <li><a class="nav__burger-menu-item" href="#team">the team</a></li>
+          </ul>
           <ul class="nav__menu">
             <li><a href="#the-problem">the problem</a></li>
             <div class="menu__columns">|</div>
@@ -28,7 +46,7 @@
       </div>
     </header>
 
-    <section class="main">
+    <section class="main" id="main">
       <h1 class="main__title">PiperNet Is Here</h1>
     </section>
 
@@ -77,7 +95,7 @@
         <h2 class="introducing__title">Introducing PiedPiperCoin</h2>
         <div class="introducing__note">
           <div class="introducing__note-logo">
-            <img src="resource_images/PPC-logo.svg" alt="PPC-logo" />
+            <img src="assets/resource_images/PPC-logo.svg" alt="PPC-logo" />
             <p class="introducing__note-logo-p">
               Pied Piper's new internet is built for users, by users.<br />
               You supply the storage, compute, and networking resources that
@@ -105,32 +123,41 @@
       <div class="container">
         <div class="team__cards">
           <div class="card">
-            <img src="resource_images/photo-richard.png" alt="Person 1" />
+            <img
+              src="assets/resource_images/photo-richard.png"
+              alt="Person 1"
+            />
             <p class="card__bio">Richard Hendricks</p>
             <p class="card__job-position">Founder & CEO</p>
           </div>
           <div class="card">
-            <img src="resource_images/photo-dinesh.png" alt="Person 2" />
+            <img src="assets/resource_images/photo-dinesh.png" alt="Person 2" />
             <p class="card__bio">Dinesh Chugtai</p>
             <p class="card__job-position">Senior Programmer</p>
           </div>
           <div class="card">
-            <img src="resource_images/photo-gilfoyle.png" alt="Person 3" />
+            <img
+              src="assets/resource_images/photo-gilfoyle.png"
+              alt="Person 3"
+            />
             <p class="card__bio">Bertram Gilfoyle</p>
             <p class="card__job-position">Chief Systems Architect</p>
           </div>
           <div class="card">
-            <img src="resource_images/photo-jared.png" alt="Person 4" />
+            <img src="assets/resource_images/photo-jared.png" alt="Person 4" />
             <p class="card__bio">Jared Dunn</p>
             <p class="card__job-position">Chief Operating Officer</p>
           </div>
           <div class="card">
-            <img src="resource_images/photo-monica.png" alt="Person 5" />
+            <img src="assets/resource_images/photo-monica.png" alt="Person 5" />
             <p class="card__bio">Monica Hall</p>
             <p class="card__job-position">Chief Financial Officer</p>
           </div>
           <div class="card">
-            <img src="resource_images/photo-big-head.png" alt="Person 6" />
+            <img
+              src="assets/resource_images/photo-big-head.png"
+              alt="Person 6"
+            />
             <p class="card__bio">Nelson Bighetti</p>
             <p class="card__job-position">Majority Investor</p>
           </div>

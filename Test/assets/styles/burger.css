@@ -1,0 +1,95 @@
+/* Настройка бургера */
+.burger-checkbox {
+  visibility: hidden;
+  position: absolute;
+}
+.nav__burger-menu {
+  list-style-type: none;
+  display: block;
+  position: fixed;
+  text-align: center;
+  visibility: hidden;
+  top: 84px;
+  right: 0;
+  transform: translateX(100%);
+  background-color: #007765;
+  border-radius: 0 0 0 15px;
+  border-left: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+  transition: 0.3s;
+}
+/* Элементы меню */
+.nav__burger-menu-item {
+  display: block;
+  padding: 12px 24px;
+  /* background-color: #066d5d; */
+}
+.nav__burger-menu-item:hover {
+  background-color: #069983;
+  border-radius: 0 0 0 15px;
+  transition: background 0.3s;
+}
+/* Настройка кнопки label */
+.burger {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s;
+  visibility: hidden;
+}
+/* добавляем "гамбургер" */
+.burger > span,
+.burger > span::before,
+.burger > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+.burger > span::before {
+  content: "";
+  top: -8px;
+}
+.burger > span::after {
+  content: "";
+  top: 8px;
+}
+.burger-checkbox:checked ~ .burger > span {
+  transform: rotate(45deg);
+}
+.burger-checkbox:checked ~ .burger > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.burger-checkbox:checked ~ .burger > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.burger-checkbox:checked ~ .nav__burger-menu {
+  visibility: visible;
+  transform: translateX(0%);
+}
+
+/* Расположение важно? */
+@media only screen and (max-width: 600px) {
+  .nav__menu {
+    visibility: hidden;
+  }
+  .nav__burger-menu {
+    display: block;
+    visibility: visible;
+  }
+  .burger {
+    visibility: visible;
+  }
+}
